@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+char* data_download() {
+    return "Raw data from OpenStreetMap";
+}
+
+char* data_parse(char* raw_data) {
+
+    return "Parsed data with necessary fields";
+}
+
+char* data_clean(char* parsed_data) {
+    return "Cleaned data";
+}
+
+char* data_transform(char* cleaned_data) {
+    return "Transformed data ready for database insertion";
+}
+
+void database_insert(char* transformed_data) {
+    printf("Data inserted into the database: %s\n", transformed_data);
+}
+
+int main() {
+    char* raw_data = data_download();
+    char* parsed_data = data_parse(raw_data);
+    char* cleaned_data = data_clean(parsed_data);
+    char* transformed_data = data_transform(cleaned_data);
+    database_insert(transformed_data);
+
+    return 0;
+}
+
